@@ -1,20 +1,14 @@
 numerator = int(input("Enter a numerator: "))
+denominator = 0  # Initialize the denominator with 0
 
-while(True):
-    denominator = int(input("Enter denominator: "))
-    if(denominator!=0):
-        break
-    else:
-        continue
+# Keep asking for the denominator until it's not zero
+while denominator == 0:
+    denominator = int(input("Enter denominator (non-zero): "))
+    if denominator == 0:
+        print("Denominator cannot be zero. Please enter a non-zero value.")
 
-# Use a while loop here to repeatedly ask the user for
-# a denominator for as long as the denominator is 0
-# (or, put another way, until the denominator is not
-# equal to 0).
-
-
-
-if numerator / denominator * denominator == numerator:
-    print "Divides evenly!"
+# Check if the division is even
+if numerator % denominator == 0:
+    print("Divides evenly!")
 else:
-    print "Doesn't divide evenly."
+    print("Doesn't divide evenly.")
